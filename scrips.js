@@ -1,8 +1,7 @@
 const grid = document.querySelector(".grid");
 
-createGrid(64);
-
-function createGrid (size) {
+function createGrid () {
+    let size = document.querySelector(".input_size").value;
     if (size >= 100) {
         size = 100;
     }
