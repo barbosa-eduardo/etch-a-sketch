@@ -15,6 +15,9 @@
 .square {
     height: 16px;
     width: 16px;
-    background-color: black;
     margin: 8px;
+}
+
+.selected {
+    background-color: black;
 }
