@@ -2,6 +2,7 @@ const grid = document.querySelector(".grid");
 
 function createGrid () {
     let size = getSize();
+    clearGrid();
     for (let i = 0; i < size; i++) {
         const row = document.createElement("div");
         row.classList.add("row");
@@ -25,4 +26,11 @@ function getSize() {
         size = 100;
     }
     return size;
+}
+
+function clearGrid() {
+    const gridChilds = grid.childNodes;
+    for (let i = gridChilds.length - 1; i >= 0; i--) {
+        gridChilds[i].remove();
+    }
 }
