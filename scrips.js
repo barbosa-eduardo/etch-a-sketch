@@ -11,7 +11,8 @@ function createGrid () {
             square.classList.add("square");
 
             square.addEventListener("mouseover", () => {
-                square.classList.add("selected");
+                square.style.background = getBackgroundRandomColor();
+                square.style.opacity = reduceOpacity(square);
             });
 
             row.appendChild(square);
@@ -33,4 +34,17 @@ function clearGrid() {
     for (let i = gridChilds.length - 1; i >= 0; i--) {
         gridChilds[i].remove();
     }
+}
+
+function getBackgroundRandomColor() {
+    let red = Math.round(Math.random() * 255);
+    let green = Math.round(Math.random() * 255);
+    let blue = Math.round(Math.random() * 255);
+    return `rgb(${red},${green},${blue})`;
+}
+
+function reduceOpacity(element) {
+    let opacity = window.getComputedStyle(element).getPropertyValue("opacity");
+    element.style.opacity = opacity*0.9;
+    console.log(opacity);
 }

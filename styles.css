@@ -18,7 +18,3 @@
 .square {
     flex: auto;
 }
-
-.selected {
-    background-color: black;
-}
