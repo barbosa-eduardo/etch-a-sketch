@@ -1,10 +1,7 @@
 const grid = document.querySelector(".grid");
 
 function createGrid () {
-    let size = document.querySelector(".input_size").value;
-    if (size >= 100) {
-        size = 100;
-    }
+    let size = getSize();
     for (let i = 0; i < size; i++) {
         const row = document.createElement("div");
         row.classList.add("row");
@@ -20,4 +17,12 @@ function createGrid () {
         }
         grid.appendChild(row);
     }
+}
+
+function getSize() {
+    let size = document.querySelector(".input_size").value;
+    if (size >= 100) {
+        size = 100;
+    }
+    return size;
 }
