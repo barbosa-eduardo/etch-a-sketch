@@ -3,6 +3,9 @@ const grid = document.querySelector(".grid");
 createGrid(64);
 
 function createGrid (size) {
+    if (size >= 100) {
+        size = 100;
+    }
     for (let i = 0; i < size; i++) {
         const row = document.createElement("div");
         row.classList.add("row");
