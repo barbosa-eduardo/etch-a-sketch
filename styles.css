@@ -6,16 +6,17 @@
 .grid {
     display: flex;
     flex-direction: column;
+    width: 960px;
+    height: 960px;
 }
 
 .row {
     display: flex;
+    flex: auto;
 }
 
 .square {
-    height: 16px;
-    width: 16px;
-    margin: 8px;
+    flex: auto;
 }
 
 .selected {
